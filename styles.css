@@ -1,0 +1,128 @@
+body {
+    background-color: #1a1a1a;
+    color: #CCCCCC;
+}
+
+input {
+    background-color: #333333;
+    color: #CCCCCC;
+    outline: none;
+}
+
+button,select,option {
+    background-color: #333333;
+    border: none;
+    color: #CCCCCC;
+    outline: none;
+}
+
+.light-mode{
+    background-color: #CCCCCC;
+    color: black;
+}
+
+input.light-mode, button.light-mode, select.light-mode, option.light-mode{
+    background-color: #EDEDED;
+}
+
+#choose {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+#output {
+    border: 2px solid red;
+    background-color: #1a1a1a;
+}
+
+.color-box {
+    display: flex;
+    align-items: center;
+}
+
+.square {
+    width: 20px; /* Размер квадратика */
+    height: 20px;
+    border: 1px solid black;
+}
+
+.verb {
+    color: #FF00FF;
+}
+
+.sverb {
+    background-color: #FF00FF;
+}
+
+.noun {
+    color: #FF7F50;
+}
+
+.snoun {
+    background-color: #FF7F50;
+}
+
+.adverb {
+    color: #00FFFF;
+}
+
+.sadverb {
+    background-color: #00FFFF;
+}
+
+.numerator {
+    color: #00FF00;
+}
+
+.snumerator {
+    background-color: #00FF00;
+}
+
+.pronoun {
+    color: #DB7093;
+}
+
+.spronoun {
+    background-color: #DB7093;
+}
+
+.preposition {
+    color: #8A2BE2;
+}
+
+.spreposition {
+    background-color: #8A2BE2;
+}
+
+.conjunctive {
+    color: #FFEB3B;
+}
+
+.sconjunctive {
+    background-color: #FFEB3B;
+}
+
+.particle {
+    color: #32CD32;
+}
+
+.sparticle {
+    background-color: #32CD32;
+}
+
+.adjective {
+    color: blue;
+}
+
+.sadjective {
+    background-color: blue;
+}
+
+.undefined{
+    color: #CCCCCC;
+}
+
+.sundefined{
+    background-color: #CCCCCC;
+}
