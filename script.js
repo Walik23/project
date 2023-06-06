@@ -1,3 +1,4 @@
+//watch arrays in data.js
 (function(){
  
     'use strict';
@@ -124,5 +125,16 @@
         }
     });
  
-
+    //changing page theme
+    select.addEventListener('change', function() {
+        if (this.value === 'light') {
+          contents.forEach(element => {
+            element.classList.add('light-mode');
+          });
+        } else {
+          contents.forEach(element => {
+            element.classList.remove('light-mode');
+          });
+        }
+    });
 })()
