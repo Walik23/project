@@ -116,7 +116,13 @@
           });
        });
     });
-   
+    
+    //function which activates the function above, when the key "enter" is pressed
+    inputField.addEventListener('keypress', function(event) {
+        if (event.keyCode === 13) {
+          button.click();
+        }
+    });
  
 
 })()
