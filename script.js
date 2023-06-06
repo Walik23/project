@@ -37,8 +37,21 @@
                  break;
          };
          return truly;
-        };
-  
+     };
+     
+     //function for outputing words into output field and console; assign classes to words
+     const output = (word) => (myClass) => {
+          if(myClass === 'undefined'){
+              console.log(`word "${word}" is undefined`); 
+              outputField.innerHTML += `<span class=${myClass}>${word} </span>`
+          }
+          else{
+              console.log(`word "${word}" is ${myClass}`);
+              outputField.innerHTML += `<span class=${myClass}>${word} </span>`
+          }
+     };
+   
+   
   })
 
 })()
