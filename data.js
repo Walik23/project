@@ -19,3 +19,11 @@
     const adjectivesSufi =   ['есеньк','еньк','ськ','езн','енн','іст','яч','ов','ач','ив','ющ','ав','ка','ат','ан','ин','ч','н','л'];
     const endings =          ['ого','ими','іми','ому','ім','их','іх','ої','им','ий','ій','ів','їв','ею','ою','у','ю','і','е','є','а','я']
     const adjectivesEnds = adjectivesEndsMin.concat(adjectivesSufi.flatMap(sufix => endings.map(ending => sufix + ending))); //combine adjectivesSufi and endings, unioning result with adjectivesEndsMin array and capturing it into adjectivesEnds array
+
+    const separators = /(?<!\w\.\w.)(?<![А-ЯЄ][а-яє]\.)(?<=\.|\?)\s+(?=[А-ЯЄ])/u; //regular regex for spliting text into sentences, ignoring abbreviations, links etc.
+
+    //capturing page content
+    const button = document.querySelector('#analyze');
+    const inputField = document.querySelector('#text');
+    const contents = document.querySelectorAll('.content');
+    const select = document.querySelector('#mode');
