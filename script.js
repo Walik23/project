@@ -14,6 +14,30 @@
     const sentences = text.split(separators).filter(Boolean);//spliting text by regular regex and deleting the empty elements
     const wordArrays = sentences.map(sentence => sentence.split(' '));//spliting sentences into words
   
+    //function for comparing words with arrays
+    const condition = (partOfSpeech) => (word) => (compareWith) => { 
+         const cleanWord = word.replace(/^[^\wА-Яа-яіІїЇєЄ]+|[^\wА-Яа-яіІїЇєЄ]+$/g, '').toLowerCase();//clearing words from dots, comas etc. 
+         let truly = null;
+         //comparing words with arrays
+         switch (compareWith) {
+             case 'ending':
+                 if(partOfSpeech.some(element => cleanWord.endsWith(element) && (element.length < cleanWord.length))){
+                     truly = true;
+                 };
+                 break;
+             case 'whole':
+                 if(partOfSpeech.includes(cleanWord)){
+                     truly = true;
+                 };
+                 break;
+             case 'prefix':
+                 if(partOfSpeech.some(element => cleanWord.startsWith(element) && (element.length < cleanWord.length))){
+                     truly = true;
+                 };
+                 break;
+         };
+         return truly;
+        };
   
   })
 
